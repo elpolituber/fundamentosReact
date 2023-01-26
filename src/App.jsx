@@ -26,7 +26,7 @@ const App = () => {
       <h1 className={classTitle}> {title.toLocaleUpperCase()}</h1>
       <img src={pathImg} alt={`imagen-${title}`}/>
       <MyButton/>
-      {user ? <Tenario1></Tenario1>:<Tenario2></Tenario2>}
+      {user && <Tenario1/>} 
     </>
   )
 };
