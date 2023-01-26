@@ -22,12 +22,20 @@ const App = () => {
   const classTitle = "text-center";
   //const pathImg=img1;
   const user=false;
+  const fruts=['🍙','🍣','🍤','🥡'];
   return (
     <>
       <h1 className={classTitle}> {title.toLocaleUpperCase()}</h1>
       <img src={img1} alt={`imagen-${title}`}/>
       <MyButton/>
-      {user && <Tenario1/>} 
+      {user && <Tenario1/>}
+      <ul>
+        {fruts.map((frut,index)=>(
+          <li key={index}>
+            {frut}-{index}
+          </li>
+        ))}
+      </ul>
     </>
   )
 };
