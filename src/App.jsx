@@ -2,6 +2,7 @@ import img1 from './assets/images/img1.jpg'
 import MyButton from './components/MyButton';
 import WelcomeText from './components/WelcomeText';
 import ListFruts from './components/fruts/ListFrut';
+import ButtonState from './components/ButtonState';
 
 const App = () => {
   const title="Mi titulo desde una constante";
@@ -11,6 +12,7 @@ const App = () => {
   const frut2=['🥡','🍙','🍣'];
   return (
     <>
+      <ButtonState/>
       <h1 className={classTitle}> {title.toLocaleUpperCase()}</h1>
       <img src={img1} alt={`imagen-${title}`}/>
       <MyButton text='Boton 1'/>
