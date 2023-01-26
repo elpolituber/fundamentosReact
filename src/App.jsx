@@ -1,8 +1,10 @@
 import img1 from './assets/images/img1.jpg'
 const MyButton = ({text})=>{
-
+  const clickButton =(title)=>{
+    console.log('holi '+title)
+  }
   return (
-    <button>{text}</button>
+    <button onClick={()=>clickButton(text)}>{text}</button>
   )
 }
 
