@@ -7,7 +7,8 @@ const App = () => {
   const title="Mi titulo desde una constante";
   const classTitle = "text-center";
   const user=true;
-  const fruts=['🍙','🍣','🍤','🥡'];
+  const fruts=['🍙','🍣','🍤'];
+  const frut2=['🥡','🍙','🍣'];
   return (
     <>
       <h1 className={classTitle}> {title.toLocaleUpperCase()}</h1>
@@ -17,6 +18,7 @@ const App = () => {
       <MyButton text='Boton 3'/>
       <WelcomeText user={user}/>
       <ListFruts fruts={fruts}/>
+      <ListFruts fruts={frut2}/>
     </>
   )
 };
