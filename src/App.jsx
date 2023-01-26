@@ -1,7 +1,7 @@
 import img1 from './assets/images/img1.jpg'
 import MyButton from './components/MyButton';
 import WelcomeText from './components/WelcomeText';
-import ItemFruts from './components/ItemFruts';
+import ListFruts from './components/fruts/ListFrut';
 
 const App = () => {
   const title="Mi titulo desde una constante";
@@ -15,12 +15,8 @@ const App = () => {
       <MyButton text='Boton 1'/>
       <MyButton text='Boton 2'/>
       <MyButton text='Boton 3'/>
-       <WelcomeText user={user}/>
-      <ul>
-        {fruts.map((frut,index)=>(
-          <ItemFruts key={index} frut={frut}/>
-        ))}
-      </ul>
+      <WelcomeText user={user}/>
+      <ListFruts fruts={fruts}/>
     </>
   )
 };
