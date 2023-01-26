@@ -1,3 +1,4 @@
+import img1 from './assets/images/img1.jpg'
 const MyButton = ()=>{
   return (
     <button>Soy un boton</button>
@@ -19,12 +20,12 @@ const Tenario2=()=>{
 const App = () => {
   const title="Mi titulo desde una constante";
   const classTitle = "text-center";
-  const pathImg="https://picsum.photos/200/300";
-  const user=true;
+  //const pathImg=img1;
+  const user=false;
   return (
     <>
       <h1 className={classTitle}> {title.toLocaleUpperCase()}</h1>
-      <img src={pathImg} alt={`imagen-${title}`}/>
+      <img src={img1} alt={`imagen-${title}`}/>
       <MyButton/>
       {user && <Tenario1/>} 
     </>
