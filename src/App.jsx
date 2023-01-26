@@ -5,16 +5,16 @@ const MyButton = ()=>{
 }
 
 const Tenario1=()=>{
-  return
+  return(
   <>
-    online
-  </>
+    <h1>online</h1>  
+  </>)
 }
 const Tenario2=()=>{
-  return
+  return(
   <>
     <h1>offline</h1>
-  </>
+  </>)
 }
 const App = () => {
   const title="Mi titulo desde una constante";
@@ -26,7 +26,7 @@ const App = () => {
       <h1 className={classTitle}> {title.toLocaleUpperCase()}</h1>
       <img src={pathImg} alt={`imagen-${title}`}/>
       <MyButton/>
-      {user ? Tenario1:Tenario2}
+      {user ? <Tenario1></Tenario1>:<Tenario2></Tenario2>}
     </>
   )
 };
