@@ -3,11 +3,9 @@ import MyButton from './components/MyButton';
 import WelcomeText from './components/WelcomeText';
 import ItemFruts from './components/ItemFruts';
 
-
 const App = () => {
   const title="Mi titulo desde una constante";
   const classTitle = "text-center";
-  //const pathImg=img1;
   const user=true;
   const fruts=['🍙','🍣','🍤','🥡'];
   return (

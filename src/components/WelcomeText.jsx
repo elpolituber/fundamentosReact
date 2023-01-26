@@ -1,4 +1,4 @@
 
-const WelcomeText=({user})=>(user ? <h1>online</h1>:<h1>offline</h1>);  
+const WelcomeText=({user})=>(<h1>{user ? "online":"offline"}</h1>);  
 
 export default WelcomeText;
