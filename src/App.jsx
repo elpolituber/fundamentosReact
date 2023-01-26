@@ -6,18 +6,8 @@ const MyButton = ({text})=>{
   )
 }
 
-const WelcomeText=({user})=>{
-  if(user){
-    return(
-      <>
-        <h1>online</h1>  
-      </>)  
-  }
-  return(
-  <>
-    <h1>offline</h1>  
-  </>)
-}
+const WelcomeText=({user})=>(user ? <h1>online</h1>:<h1>offline</h1>);  
+
 
 const ItemFrut=({frut})=>{
   return(
