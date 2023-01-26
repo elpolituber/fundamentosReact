@@ -6,23 +6,29 @@ const MyButton = ({text})=>{
   )
 }
 
-const Tenario1=()=>{
+const WelcomeText=({user})=>{
+  if(user){
+    return(
+      <>
+        <h1>online</h1>  
+      </>)  
+  }
   return(
   <>
-    <h1>online</h1>  
+    <h1>offline</h1>  
   </>)
 }
-const Tenario2=()=>{
+
+const ItemFrut=({frut})=>{
   return(
-  <>
-    <h1>offline</h1>
-  </>)
+    <li>{frut}</li>
+  )
 }
 const App = () => {
   const title="Mi titulo desde una constante";
   const classTitle = "text-center";
   //const pathImg=img1;
-  const user=false;
+  const user=true;
   const fruts=['🍙','🍣','🍤','🥡'];
   return (
     <>
@@ -31,12 +37,10 @@ const App = () => {
       <MyButton text='Boton 1'/>
       <MyButton text='Boton 2'/>
       <MyButton text='Boton 3'/>
-      {user && <Tenario1/>}
+       <WelcomeText user={user}/>
       <ul>
         {fruts.map((frut,index)=>(
-          <li key={index}>
-            {frut}-{index}
-          </li>
+          <ItemFrut key={index} frut={frut}/>
         ))}
       </ul>
     </>
