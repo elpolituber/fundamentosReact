@@ -1,7 +1,8 @@
 import img1 from './assets/images/img1.jpg'
-const MyButton = ()=>{
+const MyButton = (props)=>{
+
   return (
-    <button>Soy un boton</button>
+    <button>{props.text}</button>
   )
 }
 
@@ -27,7 +28,9 @@ const App = () => {
     <>
       <h1 className={classTitle}> {title.toLocaleUpperCase()}</h1>
       <img src={img1} alt={`imagen-${title}`}/>
-      <MyButton/>
+      <MyButton text='Boton 1'/>
+      <MyButton text='Boton 2'/>
+      <MyButton text='Boton 3'/>
       {user && <Tenario1/>}
       <ul>
         {fruts.map((frut,index)=>(
