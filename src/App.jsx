@@ -1,8 +1,8 @@
 import img1 from './assets/images/img1.jpg'
-const MyButton = (props)=>{
+const MyButton = ({text})=>{
 
   return (
-    <button>{props.text}</button>
+    <button>{text}</button>
   )
 }
 
