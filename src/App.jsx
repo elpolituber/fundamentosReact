@@ -1,21 +1,9 @@
 import img1 from './assets/images/img1.jpg'
-const MyButton = ({text})=>{
-  const clickButton =(title)=>{
-    console.log('holi '+title)
-  }
-  return (
-    <button onClick={()=>clickButton(text)}>{text}</button>
-  )
-}
-
-const WelcomeText=({user})=>(user ? <h1>online</h1>:<h1>offline</h1>);  
+import MyButton from './components/MyButton';
+import WelcomeText from './components/WelcomeText';
+import ItemFruts from './components/ItemFruts';
 
 
-const ItemFrut=({frut})=>{
-  return(
-    <li>{frut}</li>
-  )
-}
 const App = () => {
   const title="Mi titulo desde una constante";
   const classTitle = "text-center";
@@ -32,7 +20,7 @@ const App = () => {
        <WelcomeText user={user}/>
       <ul>
         {fruts.map((frut,index)=>(
-          <ItemFrut key={index} frut={frut}/>
+          <ItemFruts key={index} frut={frut}/>
         ))}
       </ul>
     </>
